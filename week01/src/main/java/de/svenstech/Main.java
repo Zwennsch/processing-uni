@@ -16,23 +16,32 @@ public class Main extends PApplet {
     }
 
     public void setup() {
-        background(235, 171,12);
+        background(235, 171, 12);
     }
 
     public void draw() {
         // ellipse(mouseX, mouseY, 50, 50);
         if (mousePressed) {
             fill(255);
+            strokeWeight(1);
             ellipse(width / 2, height / 2, 400, 400);
             fill(0);
-            ellipse(width/2, height/2, 10, 10);
-
-        }else if(keyPressed){
-            fill(125);
-            ellipse(width / 2, height / 2, 400, 400);
-            fill(0);
-            ellipse(width/2, height/2, 10, 10);
+            ellipse(width / 2, height / 2, 10, 10);
+            strokeWeight(3);
+            line(width / 2, height / 2, width / 2, 20);
+            strokeWeight(8);
+            line(width / 2, height / 2, 60, height / 2);
             
+        } else if (keyPressed) {
+            fill(255);
+            strokeWeight(1);
+            ellipse(width / 2, height / 2, 400, 400);
+            fill(0);
+            ellipse(width / 2, height / 2, 10, 10);
+            strokeWeight(3);
+            line(width / 2, height / 2, width / 2, 20);
+            strokeWeight(8);
+            line(width / 2, height / 2, width / 2 + 121, height/2 + 70);
         }
     }
 }
